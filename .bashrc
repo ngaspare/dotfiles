@@ -135,6 +135,9 @@ neofetch
 alias ls='ls -alh --group-directories-first --colo=auto'
 alias aptup='sudo apt update && sudo apt upgrade'
 alias vim='nvim'
+alias dcc='docker-compose exec'
+alias dka='docker ps -q | xargs docker stop'
+alias pdepl='bin/console pimcore:deployment:classes-rebuil -c'
 
 
 #Starship

@@ -15,6 +15,9 @@ opt.showmode = false
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
+-- Enable clipboard support
+vim.cmd('set clipboard=unnamedplus')
+
 -- Indenting
 opt.expandtab = true
 opt.shiftwidth = 2
