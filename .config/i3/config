@@ -238,7 +238,7 @@ exec_always xrandr --output DP-0 --off --output DP-1 --off --output DP-2 --prima
 exec_always nitrogen --restore
 
 # Croatian keyboard layout
-exec_always setxkbmap hr
+exec_always setxkbmap hr us
 
 # Hotkeys
 bindsym $mod+Shift+Return exec google-chrome
