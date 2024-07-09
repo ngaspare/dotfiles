@@ -5,8 +5,17 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Map the 'x' key in normal mode to delete the character under the cursor without affecting the default register.
-keymap.set("n", "x", '"_x')
+keymap.set("n", "<C-a>", "G$vgg0", { desc = "Select all" })
+keymap.set("n", "<C-a>", "G$vgg0", { desc = "Select all" })
 
--- Map the 'dd' key sequence in normal mode to delete the current line and store it in the default register.
-keymap.set("n", "dd", '"_dd')
+-- Move a line up/down
+keymap.set("n", "<A-j>", ":m .+1<CR>==", { silent = true, desc = "Move line down" })
+keymap.set("n", "<A-k>", ":m .-2<CR>==", { silent = true, desc = "Move line up" })
+keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { silent = true, desc = "Move line down in insert mode" })
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { silent = true, desc = "Move selection up" })
+
+-- Move to the next function using Alt+Down Arrow
+keymap.set("n", "<A-Down>", ":PhpactorGotoDefinitionNext<CR>", { silent = true, desc = "Move to next PHP function" })
+
+-- Move to the previous function using Alt+Up Arrow
+keymap.set("n", "<A-Up>", ":PhpactorGotoDefinitionPrev<CR>", { silent = true, desc = "Move to previous PHP function" })
