@@ -255,6 +255,7 @@ bindsym $mod+e exec nautilus
 bindsym $mod+shift+v exec /opt/viber/Viber
 bindsym $mod+shift+p exec phpstorm
 bindsym ctrl+Shift+F12 exec flameshot gui
+bindsym $mod+Escape exec ~/scripts/power-menu.sh
 
 # No border 
 default_border pixel 1
